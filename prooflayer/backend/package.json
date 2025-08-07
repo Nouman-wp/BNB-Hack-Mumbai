@@ -1,0 +1,32 @@
+{
+  "name": "prooflayer-backend",
+  "version": "1.0.0",
+  "description": "Backend for ProofLayer - Decentralized Reputation and Identity on BNB Chain",
+  "main": "src/app.ts",
+  "scripts": {
+    "dev": "ts-node src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "cors": "^2.8.5",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2",
+    "ts-node": "^9.1.1",
+    "nodemon": "^2.0.7",
+    "@types/express": "^4.17.8",
+    "@types/mongoose": "^5.10.2",
+    "@types/cors": "^2.8.10",
+    "@types/body-parser": "^1.19.0",
+    "@types/jsonwebtoken": "^8.5.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
