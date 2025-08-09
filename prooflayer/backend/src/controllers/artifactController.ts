@@ -1,4 +1,6 @@
-class ArtifactController {
+import { Artifact } from '../models/artifact';
+
+export class ArtifactController {
     async createArtifact(req, res) {
         try {
             // Logic to create an artifact

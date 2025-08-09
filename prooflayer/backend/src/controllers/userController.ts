@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
 import UserService from '../services/userService';
 
-class UserController {
-    private userService: UserService;
+export class UserController {
+    private userService: typeof UserService;
 
     constructor() {
-        this.userService = new UserService();
+        this.userService = UserService;
     }
 
     public async getUserProfile(req: Request, res: Response): Promise<void> {

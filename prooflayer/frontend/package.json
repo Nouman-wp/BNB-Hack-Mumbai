@@ -9,15 +9,16 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "axios": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
     "tailwindcss": "latest",
-    "axios": "latest",
-    "web3": "latest",
-    "walletconnect": "latest"
+    "walletconnect": "latest",
+    "web3": "latest"
   },
   "devDependencies": {
+    "@types/react": "19.1.9",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "typescript": "latest"

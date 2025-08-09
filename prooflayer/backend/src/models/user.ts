@@ -1,5 +1,14 @@
 import mongoose from 'mongoose';
 
+interface IUser {
+    walletAddress: string;
+    username: string;
+    email: string;
+    skills: string[];
+    reputationScore: number;
+    createdAt: Date;
+}
+
 const userSchema = new mongoose.Schema({
     walletAddress: {
         type: String,
@@ -29,6 +38,7 @@ const userSchema = new mongoose.Schema({
     }
 });
 
+export const User = mongoose.model<IUser>('User', userSchema);
 const User = mongoose.model('User', userSchema);
 
 export default User;
