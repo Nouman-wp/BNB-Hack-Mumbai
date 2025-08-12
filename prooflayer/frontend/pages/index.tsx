@@ -1,37 +1,38 @@
 import React from 'react';
 
 const Home: React.FC = () => {
-    return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-                <h1 className="text-6xl font-bold">
-                    Welcome to{' '}
-                    <span className="text-blue-600">
-                        ProofLayer
-                    </span>
-                </h1>
-
-                <p className="mt-3 text-2xl">
-                    Decentralized Professional Identity & Reputation Platform
-                </p>
-
-                <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-                    <a href="/login" className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600">
-                        <h3 className="text-2xl font-bold">Login &rarr;</h3>
-                        <p className="mt-4 text-xl">
-                            Access your professional identity and reputation
-                        </p>
-                    </a>
-
-                    <a href="/dashboard" className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600">
-                        <h3 className="text-2xl font-bold">Dashboard &rarr;</h3>
-                        <p className="mt-4 text-xl">
-                            View your achievements and reputation
-                        </p>
-                    </a>
-                </div>
-            </main>
+  return (
+    <div className="flex flex-col items-center justify-center min-h-[70vh]">
+      <div className="text-center mb-12">
+        <h1 className="text-5xl sm:text-6xl font-extrabold mb-4">
+          Prove Your Skills on the <span className="text-blue-600">BNB Smart Chain</span>
+        </h1>
+        <p className="text-lg sm:text-2xl text-gray-600 max-w-2xl mx-auto mb-8">
+          ProofLayer is your decentralized professional identity and reputation platform. Verify your skills, build trust, and showcase your achievements with blockchain technology.
+        </p>
+        <a href="/dashboard" className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors shadow">
+          Get Started
+        </a>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
+        <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+          <div className="text-blue-600 text-4xl mb-2">🔗</div>
+          <h3 className="text-xl font-semibold mb-2">Verify Skills</h3>
+          <p className="text-gray-600 text-center">Submit your achievements, certifications, and project work for verification on the blockchain.</p>
         </div>
-    );
+        <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+          <div className="text-blue-600 text-4xl mb-2">🌟</div>
+          <h3 className="text-xl font-semibold mb-2">Build Reputation</h3>
+          <p className="text-gray-600 text-center">Earn reputation tokens and build a verifiable track record of your professional growth.</p>
+        </div>
+        <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+          <div className="text-blue-600 text-4xl mb-2">🏆</div>
+          <h3 className="text-xl font-semibold mb-2">Showcase Achievements</h3>
+          <p className="text-gray-600 text-center">Display your verified skills and achievements through NFTs and on-chain credentials.</p>
+        </div>
+      </div>
+    </div>
+  );
 };
+
 export default Home;
