@@ -1,51 +1,85 @@
-# ProofLayer – Decentralized Reputation and Identity on BNB Chain
 
-ProofLayer is a decentralized professional identity and reputation platform built on the BNB Smart Chain. It enables users to prove their real-world skills, contributions, and work history through verifiable artifacts like code commits, blog posts, event certificates, and more.
+#  ProofLayer – Decentralized Reputation & Identity on BNB Chain
 
-## 🚀 Why ProofLayer?
+**ProofLayer** is the **most trustworthy and transparent professional social layer ever built**.  
+It solves the **trust problem in professional networks** by creating a **cryptographically verifiable reputation system** based on **real contributions**.  
 
-Traditional platforms like LinkedIn rely on self-reported data, making them vulnerable to inflated claims and bots. Most decentralized social apps focus on feeds or tokens but lack real verification. ProofLayer changes that by putting verifiable proof of work at the core of your identity.
+Unlike traditional platforms that rely on **self-declared credentials** or decentralized apps that only reward tokens, ProofLayer builds **tamper-proof professional profiles** by linking real work (code, blogs, certifications) to on-chain identity.
 
-## 🔍 What It Does
+---
 
-* Users connect their wallet via WalletConnect
-* Submit GitHub links, blog articles, conference proof, or certificate URLs
-* AI engine (Claude or GPT) verifies, analyzes, and extracts skill data
-* Each artifact is pinned to IPFS using Pinata
-* Reputation NFTs are minted on BNB Testnet via BEP 721 smart contracts
-* Dashboard displays composite identity, skill graph, and contribution history
+##  Key Features
+- **Wallet-based Identity** → Sign in with Ethereum/BNB Chain (SIWE).  
+- **Real Contribution Verification** → AI checks commit history, timestamps, blog metadata, and certificates.  
+- **Decentralized Storage** → Verified proof packs stored on **IPFS (via Pinata)**.  
+- **Reputation NFTs** → BEP-721 tokens represent verified achievements.  
+- **Structured Reputation Data** → Indexed in **MongoDB (artifacts)** and **Supabase (scores, leaderboards)**.  
+- **Frontend** → Modern **Next.js + Tailwind** with wallet integration.  
+- **Backend** → Node.js microservices for AI verification & blockchain interactions.  
 
-## 🧠 Features
+---
 
-* AI powered skill inference and reputation scoring
-* NFT based proof of work for every verified artifact
-* Decentralized metadata storage using IPFS
-* Collateral staking and peer attestations for Sybil resistance
-* Portable, tamper proof, and composable identity layer
+## 🛠 Tech Stack
 
-## 🛠️ Tech Stack
+### Blockchain
+- **BNB Smart Chain Testnet**  
+- Solidity + Hardhat + OpenZeppelin  
+- BEP-721 NFTs for reputation  
 
-* Frontend: Next.js + Tailwind CSS
-* Backend: Node.js + Express
-* AI: Claude REST API
-* Blockchain: BNB Smart Chain Testnet, Hardhat, BEP 721
-* Storage: IPFS via Pinata
-* Database: MongoDB for artifact indexing, Supabase for session caching
-* Auth: WalletConnect
+### Storage
+- **IPFS + Pinata** → Proof data & NFT metadata  
 
-## 📦 Installation
+### Backend
+- Node.js (Express or Fastify)  
+- AI Verification (Node.js + optional Python microservices)  
+- REST/GraphQL APIs  
 
-Clone the repo:
+### Databases
+- **MongoDB Atlas** → Store raw artifacts & AI verification logs  
+- **Supabase (Postgres)** → Store structured reputation scores, leaderboards, and provide realtime updates  
+
+### Frontend
+- Next.js + Tailwind CSS  
+- Wagmi + RainbowKit for wallet connection  
+- Vercel for hosting  
+
+### Deployment
+- Vercel (Frontend)  
+- Railway / Fly.io (Backend)  
+- MongoDB Atlas Cloud  
+- Supabase Cloud  
+
+---
+
+---
+
+## 🔑 Setup Instructions
+
+### 1. Prerequisites
+
+* Node.js v18+
+* Hardhat
+* MongoDB Atlas account
+* Supabase project setup
+* Pinata API keys
+* MetaMask wallet on BNB Testnet
+
+### 2. Install Dependencies
 
 ```bash
-git clone https://github.com/yourusername/prooflayer.git
-cd prooflayer
 npm install
 ```
 
-Start the dev server:
 
-```bash
-npm run dev
-```
+### 3. Run Services
 
+* **Smart Contracts**: `npx hardhat run scripts/deploy.js --network bnbTestnet`
+* **Backend API**: `npm run dev` in `/backend`
+* **Frontend**: `npm run dev` in `/frontend`
+
+---
+
+
+##  Team
+
+Built with ❤️ by hackers who believe in **trust-first professional networks**.
