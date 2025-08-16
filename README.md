@@ -2,11 +2,11 @@
 
 ProofLayer is a decentralized professional identity and reputation platform built on the BNB Smart Chain. It enables users to prove their real-world skills, contributions, and work history through verifiable artifacts like code commits, blog posts, event certificates, and more.
 
-## 🚀 Why ProofLayer?
+##  Why ProofLayer?
 
 Traditional platforms like LinkedIn rely on self-reported data, making them vulnerable to inflated claims and bots. Most decentralized social apps focus on feeds or tokens but lack real verification. ProofLayer changes that by putting verifiable proof of work at the core of your identity.
 
-## 🔍 What It Does
+##  What It Does
 
 * Users connect their wallet via WalletConnect
 * Submit GitHub links, blog articles, conference proof, or certificate URLs
@@ -15,7 +15,7 @@ Traditional platforms like LinkedIn rely on self-reported data, making them vuln
 * Reputation NFTs are minted on BNB Testnet via BEP 721 smart contracts
 * Dashboard displays composite identity, skill graph, and contribution history
 
-## 🧠 Features
+##  Features
 
 * AI powered skill inference and reputation scoring
 * NFT based proof of work for every verified artifact
@@ -33,7 +33,7 @@ Traditional platforms like LinkedIn rely on self-reported data, making them vuln
 * Database: MongoDB for artifact indexing, Supabase for session caching
 * Auth: WalletConnect
 
-## 📦 Installation
+##  Installation
 
 Clone the repo:
 
