@@ -1,0 +1,19 @@
+{
+  "name": "@prooflayer/contracts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.ts",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network testnet",
+    "lint": "solhint 'contracts/**/*.sol'"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/contracts": "^4.9.6",
+    "dotenv": "^16.6.1",
+    "hardhat": "^2.26.3",
+    "solhint": "^3.6.2"
+  }
+}
