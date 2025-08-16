@@ -3,11 +3,86 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start: 255, 78, 80;
+  --background-middle: 44, 11, 63;
+  --background-end: 10, 36, 99;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start)),
+    rgb(var(--background-middle)),
+    rgb(var(--background-end))
+  );
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Space effects */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(147, 129, 255, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(252, 152, 66, 0.1) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* Star field effect */
+.star-field {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+/* Custom components */
+@layer components {
+  .space-card {
+    @apply bg-opacity-10 backdrop-blur-lg bg-white rounded-lg border border-opacity-20 border-white p-6 transition-all duration-300 hover:bg-opacity-20;
+  }
+
+  .space-button {
+    @apply px-6 py-3 rounded-lg bg-gradient-to-r from-space-orange to-space-accent text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-space-orange/20;
+  }
+
+  .nebula-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-space-nebula to-space-cosmic font-bold;
+  }
+}
+
+/* Floating animation for cards */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Nebula background effect */
+.nebula-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(147, 129, 255, 0.1) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: nebula-shift 15s ease-in-out infinite;
+  pointer-events: none;
 }
