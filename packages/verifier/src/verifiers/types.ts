@@ -9,8 +9,8 @@ export interface VerificationResult {
 
 export interface VerificationCheck {
   name: string;
-  success: boolean;
-  message: string;
+  result: 'pass' | 'fail';
+  details?: string;
 }
 
 export interface VerifierContext {
